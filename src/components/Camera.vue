@@ -13,15 +13,24 @@
 
 <script>
 import * as faceapi from "face-api.js";
+import path from "path";
 export default {
   mounted() {
     const video = this.$refs.video;
 
     Promise.all([
-      faceapi.nets.tinyFaceDetector.loadFromUri("../models"),
-      faceapi.nets.faceLandmark68Net.loadFromUri("../models"),
-      faceapi.nets.faceRecognitionNet.loadFromUri("../models"),
-      faceapi.nets.faceExpressionNet.loadFromUri("../models"),
+      faceapi.nets.tinyFaceDetector.loadFromUri(
+        path.resolve(`${__dirname}/models`)
+      ),
+      faceapi.nets.faceLandmark68Net.loadFromUri(
+        path.resolve(`${__dirname}/models`)
+      ),
+      faceapi.nets.faceRecognitionNet.loadFromUri(
+        path.resolve(`${__dirname}/models`)
+      ),
+      faceapi.nets.faceExpressionNet.loadFromUri(
+        path.resolve(`${__dirname}/models`)
+      ),
     ]).then(this.startVideo());
     video.addEventListener("play", () => {
       const canvas = faceapi.createCanvasFromMedia(video);
