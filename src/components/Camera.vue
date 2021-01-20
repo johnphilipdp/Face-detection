@@ -20,16 +20,16 @@ export default {
 
     Promise.all([
       faceapi.nets.tinyFaceDetector.loadFromUri(
-        path.resolve(`${__dirname}/models`)
+        path.resolve(`${__dirname}/Face-detection/models`)
       ),
       faceapi.nets.faceLandmark68Net.loadFromUri(
-        path.resolve(`${__dirname}/models`)
+        path.resolve(`${__dirname}/Face-detection/models`)
       ),
       faceapi.nets.faceRecognitionNet.loadFromUri(
-        path.resolve(`${__dirname}/models`)
+        path.resolve(`${__dirname}/Face-detection/models`)
       ),
       faceapi.nets.faceExpressionNet.loadFromUri(
-        path.resolve(`${__dirname}/models`)
+        path.resolve(`${__dirname}/Face-detection/models`)
       ),
     ]).then(this.startVideo());
     video.addEventListener("play", () => {
