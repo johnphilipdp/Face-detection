@@ -62,16 +62,12 @@ export default {
 </script>
 
 <style>
-#video_container {
-  max-width: 600px;
-  margin: 0 auto;
-}
 video {
   position: absolute;
-  box-shadow: 1px 11px 51px rgb(0 0 0 / 22%);
-  height: 560px;
-  width: 749px;
   border: 3px solid #dcdcdc;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 canvas {
   position: absolute;
