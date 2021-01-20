@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <h1>Face Detector</h1>
+    <h1>Face Recognition</h1>
   </nav>
 </template>
 

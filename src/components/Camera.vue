@@ -70,6 +70,9 @@ video {
   margin: 0 auto;
 }
 canvas {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   position: absolute;
 }
 </style>
