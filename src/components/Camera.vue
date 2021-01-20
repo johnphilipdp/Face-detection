@@ -18,10 +18,10 @@ export default {
     const video = this.$refs.video;
 
     Promise.all([
-      faceapi.nets.tinyFaceDetector.loadFromUri("Face-detection/models"),
-      faceapi.nets.faceLandmark68Net.loadFromUri("Face-detection/models"),
-      faceapi.nets.faceRecognitionNet.loadFromUri("Face-detection/models"),
-      faceapi.nets.faceExpressionNet.loadFromUri("Face-detection/models"),
+      faceapi.nets.tinyFaceDetector.loadFromUri("../models"),
+      faceapi.nets.faceLandmark68Net.loadFromUri("../models"),
+      faceapi.nets.faceRecognitionNet.loadFromUri("../models"),
+      faceapi.nets.faceExpressionNet.loadFromUri("../models"),
     ]).then(this.startVideo());
     video.addEventListener("play", () => {
       const canvas = faceapi.createCanvasFromMedia(video);
