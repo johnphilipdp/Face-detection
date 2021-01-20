@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Nav />
+    <Camera />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Camera from "./components/Camera";
+import Nav from "./components/Nav";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Camera,
+    Nav,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100wh;
+  background: rgb(19, 83, 145);
+  background: linear-gradient(
+    53deg,
+    rgba(19, 83, 145, 1) 0%,
+    rgba(182, 21, 190, 1) 100%
+  );
 }
 </style>
