@@ -1,5 +1,9 @@
 # face_analysis
 
+## Description
+
+A Vuejs app that detects facial movements using Tensorflow JS.
+
 ## Project setup
 ```
 yarn install
